@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Enigma 5</title>
+    <style>
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <a onclick="showInstructions()" href="./codes/4/6/2/code.html"><img src="images/Gnome-searchtool.svg" /></a>
+      <form action="#" onsubmit="goToPass();return false">
+        <label>Type the 3 digits here:</label>
+        <input id="pass" type="password" />
+        <input type="submit" />
+      </form>
+    </main>
+    <footer>
+      <p>Search icon: David Vignoni / ICON KING, LGPL <http://www.gnu.org/licenses/lgpl.html>, via Wikimedia Commons</p>
+    </footer>
+  </body>
+  <script>
+    function showInstructions() {
+        var instStr = "Instructions:\n";
+        instStr += "You have to collect characters (like `e` or `3`) from the files on this website.";
+        alert(instStr);
+    }
+    
+    function goToPass() {
+        var pass = document.getElementById("pass").value;
+        
+        if(pass.length == 3 && !isNaN(pass) && Number.isInteger(+pass)) {
+            console.log(window.location.pathname + pass);
+            document.location.href = "codes/" +  pass[0] + "/" + pass[1] + "/" + pass[2] + "/";
+        }
+    }
+  </script>
+</html>
