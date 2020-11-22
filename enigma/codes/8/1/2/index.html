@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Letter 3</title>
+    <style>
+        #status {
+            background-color: red;
+            
+        }
+    </style>
+  </head>
+  <body>
+    <header><h1>Find the third letter on this page</h1></header>
+    <main>
+        <h2>Firewall status: <span id="status" onclick="toggle()">enabled</span></h2>
+        <p id="solution" hidden="">Your last letter is: X</p>
+    </main>
+    <footer></footer>
+    <script>
+        function toggle() {
+            spanEl = document.getElementById("status");
+            if (spanEl.innerHTML == "enabled") {
+                spanEl.style.backgroundColor = "green";
+                spanEl.innerHTML = "disabled";
+            }
+            else {
+                spanEl.style.backgroundColor = "red";
+                spanEl.innerHTML = "enabled";
+            }
+            
+            document.getElementById("solution").hidden = !document.getElementById("solution").hidden;
+        }
+    </script>
+  </body>
+</html>
