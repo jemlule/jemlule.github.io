@@ -5,7 +5,9 @@
     <title>Enigma 5</title>
     <style>
       body {
-        background-color: black;
+        background-color: #181919;
+        margin-bottom: 0;
+        min-height: 100%;
       }
       main {
         display: flex;
@@ -16,9 +18,22 @@
 
         color: #0d0;
       }
+
+      main input {
+        background-color: black;
+        color: white;
+      }
+
       footer {
         color: #0d0;
+        background-color: black;
         /*min-height: 10vh;*/
+        min-height: 100%;
+      }
+
+      footer p {
+        margin: 0;
+        height: 100%;
       }
     </style>
   </head>
@@ -39,7 +54,7 @@
   <script>
     function showInstructions() {
         var instStr = "Instructions:\n";
-        instStr += "You have to collect three capital letters (like `E` or `J`) from the files on this website.";
+        instStr += "You have to collect a name from the different pages of this website.";
         alert(instStr);
     }
     
